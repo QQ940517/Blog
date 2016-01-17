@@ -1,0 +1,14 @@
+
+p.error {
+  color:red;
+  font-size: 10px;
+  font-family: "微软雅黑";
+  text-align: left;
+}
+p.valid{
+  color:green;
+}
+
+.i3 {
+  margin-right: 4px;
+}

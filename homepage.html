@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>   
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="BOOM-BLOG是一个个人博客网站，网站建立于2016年12月18日，主要是提供团队成员介绍和一些技术性文章的发表" /> 
+                                                                               <!-- 网站描述（description -->
+    <meta name="author"    content="BOOM-BLOG" />                              <!-- 网站作者 -->
+    <meta name="keywords"  content="BOOM-BLOG网站,技术文章，个人介绍，jQueru,javascript,bootstap,php" />  
+                                                                                            <!--网站关键字 -->
+    <meta name="robots"    content="index,follow" />                           <!--如何索引此页面 -->
+    <meta name="copyright" content="本网站归BOOM-BLOG团队所有" />              <!--网站版权 -->
+    <meta name="generator" content="sublime3-text"/>                           <!--网站编辑软件-->
+
+    <meta name="application-name"  content="BOOM-BLOG" />                      <!-- WIN7应用程序图标-->
+    <meta http-equiv="windows-Target" content="_top">  
+    <meta http-equiv="Pics-label" content="">
+
+
+    <meta name="renderer" content="webkit">    
+
+    <title>BOOM-BLOG网站</title>
+    <link href="image/3.png"  rel="shortcut icon"/>                           <!-- 网站标题图标 -->
+
+    
+    <script src="cite/jQ/jquery-1.11.3.min.js"></script>                         <!--引入jquery-->
+    <link href="cite/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="cite/Font-Awesome-3.2.1/css/font-awesome.min.css"  rel="stylesheet"/>
+    <script src="cite/jQ/jquery-1.11.3.min.js"></script> 
+    <script src="cite/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+  
+    <script src="cite/jQ/hammer.js"></script>
+    <script src="cite/jQ/jquery.hammer.js"></script>
+    
+<!-- 
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />                          引入jquery Ui文件
+    <link href="css/jquery-ui.theme.min.css" rel="stylesheet" />
+           
+    
+   
+  
+    <script src="cite/jQ/jquery-ui.min.js"></script>      -->
+
+    <script src="cite/jQ/jquery.validate.js"></script>
+
+    <script src="cite/jQ/jquery.metadata.js"></script>                           <!--引入jquery插件 -->
+
+    
+    
+  
+
+    
+    <link href="1.css" rel="stylesheet" />
+    <link href="2.css" rel="stylesheet" />
+     <script src="js/sign.js"></script>  
+  
+    <script src="js/register.js"></script>
+    <script src="js/carousel.js"></script>
+  
+
+
+     <!--[if lt IE 9]>  
+     <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+     <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+     <![endif]-->
+
+  
+ 
+ 
+  </head>
+  <body>
+       <div class="header">                                  <!--头部导航栏-->
+           <nav class="navbar" role="navigation">
+              <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#"><img src="image/logo.png"/></a>
+                </div>
+
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   
+                 
+                  <ul class="nav navbar-nav navbar-right u1">
+
+                    <li class="dropdown" data-toggle="dropdown">
+                        <ul class="dropdown-menu u2">
+                           <li><a href="#">java技术</a>
+                           <li><a href="#">前端技术</a>
+                           <li><a href="#">框架技术</a>
+                           <li><a href="#">相关文章</a>
+                        </ul>
+                        <a href="#" >技术社区 </a>
+
+                    </li>
+
+                    <li class="dropdown" data-toggle="dropdown">
+                        <ul class="dropdown-menu u2">
+                           <li><a href="#">唐川博客</a></li>
+                           <li><a href="#">何俊博客</a></li>
+                        </ul>
+                        <a href="#">BOOM博客 </a>
+                    </li>
+                    <li><a href="#">关于我们</a></li>
+                    <li>
+                    <a  data-toggle="modal" data-target="#myModal" class="a2">登录</a>
+                    
+                      
+                    <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  data-backdrop="static">
+                        
+                          <div class="modal-dialog" role="document" >
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" style="margin-top:6px;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                                <ul class="u9">
+
+                                   <li class="c"><a class="ccc"  href="#sign"  data-toggle="tab" >登录</a></li>
+                                   <li><a  href="#zhuce" data-toggle="tab">注册</a></li>
+                                   
+                                </ul>
+
+                                <br/>
+
+                                <div id="myTabContent" class="tab-content">
+
+                                   <div class="tab-pane fade in active" id="sign">
+                                      <form id="f3" class="f3" action="" method="get">
+
+                                        <input type="text"  placeholder="请输入邮箱" name="email" id="email" />
+                                        <p></p>
+                                        <input type="password" placeholder="请输入密码" name="password" id="password"/>
+                                        <p></p>
+                                       <input type="checkbox" name="checkbox"  id="checkbox" class="c1" /><span class="s2">记住密码</span>
+                                        <a class="a5" href="#">忘记密码</a>
+                                        <input type="submit" value="登录" name="button" class="b1" id="b1"
+                                         data-role="submit"/>
+                                      </form>
+                                   </div>
+
+
+                                   <div class="tab-pane fade" id="zhuce">
+                                     <form id="f4" class="f4" action="" method="get">
+
+                                        <input type="text"  placeholder="请输入电子邮箱地址" name="emails" id="emails" />
+                                        <p></p>
+
+                                        <input type="password" placeholder="请输入5-15位密码，不能包含空格!" name="passwords" id="passwords"/>
+                                        <p></p>
+
+                                        <input type="password" placeholder="请再次输入密码" name="cpassword" id="cpassword"/>
+                                        <p></p>
+
+                                        <input type="text"  placeholder="请输入验证码" name="vali" id="vali" />
+                                        <p></p>
+                                      
+                                        <input type="submit" value="注册" name="button" class="b1" id="b1"
+                                        data-role="submit"/>
+                                      </form>
+                                   </div>
+                                  
+                                   
+                                </div>
+                              </div>
+                             
+                            </div>
+                          </div>
+                          
+                        </div>
+                        
+
+                    </li>
+                    <li><a href="sign.html">注册</a></li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </nav>
+       </div>
+  <div class="search">
+    <div class="container">
+       <div class="row">
+         <div class="col-md-4 navbar-right">
+              <form class="f1">
+                        <input class="i1"  type="text" placeholder="请输入你想搜索的内容" />
+                        <input class="s1"  type="submit"  value="" />
+              </form>
+         </div>
+       </div>
+       </div>
+  </div>
+
+  <div class="middle">
+      <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+              <div id="myCarousel" class="carousel slide " data-ride="carousel">
+                   <!-- 轮播（Carousel）指标 -->
+                   <ol class="carousel-indicators o1">
+                      <li data-target="#myCarousel"  data-slide-to="0" class="active t1"></li>
+                      <li data-target="#myCarousel"  data-slide-to="1" class="t2"></li>
+                      <li data-target="#myCarousel"  data-slide-to="2" class="t3"></li>
+                      <li data-target="#myCarousel"  data-slide-to="3" class="t4"></li>
+                   </ol>   
+                   <!-- 轮播（Carousel）项目 -->
+                   <div class="carousel-inner">
+                      <div class="item active">
+                         <img src="image/lun1.png" alt="First slide">
+                         
+                      </div>
+                      <div class="item">
+                         <img src="image/lun2.png" alt="Second slide">
+                         
+                      </div>
+                      <div class="item">
+                         <img src="image/lun3.png" alt="Third slide">
+                        
+                      </div>
+                       <div class="item">
+                         <img src="image/lun4.png" alt="four slide">
+                    
+                      </div>
+                   </div>
+                   <!-- 轮播（Carousel）导航 -->
+                   <a class="carousel-control left" href="#myCarousel" 
+                      data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left  s1" aria-hidden="true"></span>
+                   </a>
+                   <a class="carousel-control right" href="#myCarousel" 
+                      data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                   </a>  
+                </div> 
+
+          </div>
+       </div>
+
+      </div>
+  </div>
+ 
+
+  <div class="third ">
+        <div class="container">
+           <div class="row">
+              
+                 <div class="col-md-4 col-md-offset-1">
+                     <div class="t1">
+                       <h4>Boom-Blog</h4>
+                       <label>推荐</label>
+                     </div>
+                     <br/>
+                     <div class="row">
+                       <div class="col-md-12">
+                                <div class="h">
+                                    <h5>更好的2d引擎→DNG</h5>
+                                </div>
+                                <p>在市面上，做PC游戏最常使用的2d引擎是hge。但hge的整个框架对于PC游戏来说还是存在很多的问题，最近，我的大学同学吴泔游以及他的小团队在hge的基础思想上，重新编写了一款新的用于pc端的2d引擎，使用灵活方便，功能在hge基础上扩展了很多...</p>
+                               <a href="#" class="a1 pull-right">阅读全文◆</a><br/>
+                               <div class="hh">
+                                   <span> &nbsp;时间:2016-01-01 &nbsp;&nbsp;作者:XXX&nbsp&nbsp个人博客[技术博客]</span>
+                               </div>
+
+                        </div>
+                        <div class="col-md-12">
+                               <div class="h">
+                                    <h5>如何快速使用bootstap</h5>
+                               </div>
+                               <p>Bootstap是大多数前端学习者在学习完html,css,javascript之后接触的一门简单的前端，虽然使用简单方便，但是很多刚接触前端的人还是存在许多的问题，在使用过程中总是觉得不太顺，甚至有些组件，插件并不是读者所想要的效果，那么我们到底应该怎么去快速简单的使用这门框架呢...</p>
+                               <a href="#" class="a1 pull-right">阅读全文◆</a>
+                               <div class="hh hh2">
+                                  <span> &nbsp;时间:2016-01-01 &nbsp;&nbsp;作者:XXX&nbsp&nbsp个人博客[技术博客]</span>
+                              </div>
+
+                        </div>
+                        <div class="col-md-12">
+                               <div class="h">
+                                     <h5>浅谈CSS书写标准</h5>
+                               </div>
+                               <p>由于在整个团队的开发里，每个人的编码风格有很多的不同。那么拥有一套严格的CSS规范是很重要的。很多人不了解书写CSS的规范，接下来我就做一些简单的介绍。第一：对于书写时空格的使用方法，有以下三点是要如下方法书写...</p>
+
+                                
+                                <a href="#" class="a1 pull-right">阅读全文◆</a>
+                                <div class="hh hh3">
+                                     <span> &nbsp;时间:2016-01-01 &nbsp;&nbsp;作者:XXX&nbsp&nbsp个人博客[技术博客]</span>
+                                </div>
+
+                        </div>
+                    </div>
+              </div>
+
+                 
+                 
+                
+               <div class="col-md-4 c4 ">
+                     <div class="t1">
+                       <h4>书籍</h4>
+                       <label>推荐</label>
+                     </div>
+                    <!--  <form class="f1">
+                        <input class="i1"  type="text" placeholder="请输入你想搜索的内容" />
+                        <input class="s1"  type="submit"  value="" />
+                     </form> -->
+                     
+                     
+                     <div class="t">
+                        <div class="t2">
+                           <h4><i class="icon-star i2"></i>good</h4>
+                           <label>book</label>
+                       </div>
+                      </div>
+                      
+                  
+                     <div class="coll">
+                       <div class="panel-group " id="accordion" role="tablist" aria-multiselectable="true">
+
+                          <div class="panel">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                              <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="ac">
+                                  <i class="icon-circle-arrow-down i1"></i>安卓书籍
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body">
+                                  <div class="list-group">
+
+                                      <a href="#" class="list-group-item list-group-item-success"><i>1.
+                                      </i>
+                                      深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-info"><i>2.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-warning"><i>3.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-danger"><i>4.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-success"><i>1.
+                                      </i>
+                                      深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-info"><i>2.
+                                      </i>深入浅出javascript</a>
+                                      
+
+                                  </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                              <h4 class="panel-title">
+                                <a class="collapsed ac" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                 <i class="icon-circle-arrow-down i1"></i>前端书籍
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                              <div class="panel-body">
+                                    <div class="list-group">
+
+                                      <a href="#" class="list-group-item list-group-item-success"><i>1.
+                                      </i>
+                                      深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-info"><i>2.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-warning"><i>3.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-danger"><i>4.
+                                      </i>深入浅出javascript</a>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                              <h4 class="panel-title">
+                                <a class="collapsed ac" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                 <i class="icon-circle-arrow-down i1"></i>C++书籍
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                              <div class="panel-body">
+                                    <div class="list-group">
+
+                                      <a href="#" class="list-group-item list-group-item-success"><i>1.
+                                      </i>
+                                      深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-info"><i>2.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-warning"><i>3.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-danger"><i>4.
+                                      </i>深入浅出javascript</a>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                              <h4 class="panel-title">
+                                <a class="collapsed ac" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                 <i class="icon-circle-arrow-down i1"></i>ios书籍
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                              <div class="panel-body">
+                                    <div class="list-group">
+
+                                      <a href="#" class="list-group-item list-group-item-success"><i>1.
+                                      </i>
+                                      深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-info"><i>2.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-warning"><i>3.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-danger"><i>4.
+                                      </i>深入浅出javascript</a>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel">
+                            <div class="panel-heading" role="tab" id="headingFive">
+                              <h4 class="panel-title">
+                                <a class="collapsed ac" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                 <i class="icon-circle-arrow-down i1"></i>unity书籍
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                              <div class="panel-body">
+                                    <div class="list-group">
+
+                                      <a href="#" class="list-group-item list-group-item-success"><i>1.
+                                      </i>
+                                      深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-info"><i>2.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-warning"><i>3.
+                                      </i>深入浅出javascript</a>
+                                      <a href="#" class="list-group-item list-group-item-danger"><i>4.
+                                      </i>深入浅出javascript</a>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+
+
+                        </div>
+                       </div>
+
+
+               </div>
+
+
+               <div class="col-md-3">
+                      <div class="t1">
+                       <h4>团队</h4>
+                       <label> 介绍</label>
+                     </div>
+                       <br/>
+                     <img src="image/touxiang.png" class="im1"/>
+                     <br/>
+                     <br/>
+                     
+                     <ul class="u3"> 
+                          <li>姓名：唐川</li>
+                          <li>网站后台技术总监</li>
+                          <li>毕业学校：成都大学</li>
+                          <li>个人爱好：健身,踢球,旅游,健身</li>
+                          <li>主攻方向：Java-web，Android</li>
+                     </ul>
+                     <br/>
+                     <br/>
+                     <img src="image/touxiang2.png" class="im1"/>
+                     <br/>
+                     <br/>
+                     
+                     <ul class="u3"> 
+                          <li>姓名：何俊</li>
+                          <li>网站前端技术总监</li>
+                          <li>毕业学校：成都大学</li>
+                          <li>个人爱好：旅游，上网，看书</li>
+                          <li>主攻方向：web前端。</li>
+                     </ul>
+               </div>
+             
+              
+
+           </div>
+        </div>
+  </div>
+  
+  <div class="foot">
+      <div class="container">
+          <div class="row">
+              
+                  
+                     <div class="col-md-4">
+                        <span>友情链接</span>
+                         <ul class="nav nav-pills nav-stacked">
+                            <li role="presentation"><a href="http://www.imooc.com"   target="_blank"  data-toggle="tooltip" data-placement="top" title="慕课网" >慕课网</a></li>
+                            <li role="presentation"><a href="http://www.bootcss.com" target="_blank"  data-toggle="tooltip" data-placement="top" title="bootstap中文网">bootstap中文网</a></li>
+                            <li role="presentation"><a href="http://www.hiapk.com"   target="_blank"  data-toggle="tooltip" data-placement="top" title="安卓网">安卓网</a></li>
+                          </ul>
+                     </div>
+                      <div class="col-md-4">
+                         <span>相关酷站</span>
+                         <ul class="nav u5">
+                            <li role="presentation"><a href="http://www.uisdc.com"   target="_blank"  data-toggle="tooltip" data-placement="top" title="优设">优设</a></li>
+                            <li role="presentation"><a href="http://www.itellyou.cn" target="_blank"  data-toggle="tooltip" data-placement="top" title="I Tell You">I Tell You</a></li>
+                            <li role="presentation"><a href="http://www.runoob.com"  target="_blank"  data-toggle="tooltip" data-placement="top" title="菜鸟教程">菜鸟教程</a></li>
+                         </ul>
+                     </div>
+                     <div class="col-md-4">
+                          <span>联系我们</span>
+                          <ul class="nav u5">
+                            <li role="presentation"><a href="#"  target="_blank"  data-toggle="tooltip" data-placement="top" title="网站微博">网站微博</a></li>
+                            <li role="presentation"><a href="#"  target="_blank"  data-toggle="tooltip" data-placement="top" title="网站微信">网站微信</a></li>
+                            <li role="presentation"><a href="#"  target="_blank"  data-toggle="tooltip" data-placement="top" title="联系电话">联系电话</a></li>
+                          </ul>
+                     </div>
+
+               
+  
+          </div>
+      </div>
+  </div>
+
+ <div class="bottom">
+       <div class="container">
+         <div class="row">
+             <div class="col-md-2 col-md-offset-5 col-xs-offset-4">
+           
+                    <span>地址：成都大学</span>
+
+             </div>
+         </div>
+       </div>
+ </div>
+                  
+   
+    
+  </body>
+</html>
